@@ -33,7 +33,7 @@ wff3 = Not(Not((And(Or(p1,p2,p3,p4), Or(Not(p1),Not(p2),Not(p3),p4), \
 
 
 s = Solver()
-s.add(wff2 == wff3)
+s.add(Not(wff3 == wff2 == wff1))
 
 print (s.check())
 
